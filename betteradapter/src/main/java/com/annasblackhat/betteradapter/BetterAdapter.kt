@@ -9,7 +9,7 @@ import android.view.ViewGroup
 /**
  * Created by ANNASBlackHat on 15/12/17.
  */
-class BetterAdapter (@field:LayoutRes private val layoutId: Int,
+abstract class BetterAdapter (@field:LayoutRes private val layoutId: Int,
                      private val listData: List<*>? = null,
                      private val variable: Int = 0,
                      private val viewNoData: View? = null): RecyclerView.Adapter<BetterViewHolder>() {
