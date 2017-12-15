@@ -11,7 +11,7 @@ import android.view.ViewGroup
  */
 class BetterAdapter (@field:LayoutRes private val layoutId: Int,
                      private val listData: List<*>? = null,
-                     private val variable: Int,
+                     private val variable: Int = 0,
                      private val viewNoData: View? = null): RecyclerView.Adapter<BetterViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): BetterViewHolder {
