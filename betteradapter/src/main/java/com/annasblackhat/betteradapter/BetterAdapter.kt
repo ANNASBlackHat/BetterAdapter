@@ -14,8 +14,8 @@ abstract class BetterAdapter (@field:LayoutRes private val layoutId: Int,
                      private val variable: Int = 0,
                      private val viewNoData: View? = null): RecyclerView.Adapter<BetterViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): BetterViewHolder {
-        val view = LayoutInflater.from(parent?.context).inflate(layoutId, parent, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BetterViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(layoutId, parent, false)
         return BetterViewHolder(view)
     }
 
