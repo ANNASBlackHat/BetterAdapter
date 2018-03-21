@@ -14,6 +14,6 @@ Add it in your root build.gradle at the end of repositories:
 ***Step 2.*** Add the dependency
 ```sh
 dependencies {
-	        implementation 'com.github.ANNASBlackHat:BetterAdapter:v1.0.2'
+	        implementation 'com.github.ANNASBlackHat:BetterAdapter:1.0.3'
 	}
 ```
