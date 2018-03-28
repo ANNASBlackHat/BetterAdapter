@@ -1,19 +1,53 @@
 # BetterAdapter
-Adding to Project :
+Easy way to dealing with Recyclerview adapter
 
-***Step 1.*** Add the JitPack repository to your build file
-Add it in your root build.gradle at the end of repositories:
+### Download
+Use Gradle :
 ```sh
 	repositories {
-			...
 			maven { url 'https://jitpack.io' }
 		}
 	}
+	
+	dependencies {
+	        implementation 'com.github.ANNASBlackHat:BetterAdapter:1.0.4'
+	}
 ```
 
-***Step 2.*** Add the dependency
+### Enable Databinding
 ```sh
-dependencies {
-	        implementation 'com.github.ANNASBlackHat:BetterAdapter:1.0.3'
-	}
+android{
+
+dataBinding {
+        enabled = true
+    }
+}
+
+```sh
+
+**if you're using kotlin, add kapt plugin**
+```sh
+apply plugin: 'kotlin-kapt'
+```
+
+
+## Example
+*list_item_product.xml*
+```xml
+<layout>
+    <data>
+        <variable
+            name="model"
+            type="com.example.yourpackage.Product"/>
+    </data>
+    <android.support.constraint.ConstraintLayout
+   ............
+						 
+   </android.support.constraint.ConstraintLayout>
+</layout>						 						 
+```
+
+**Implementation on your activity/fragment :**
+```kotlin
+recview.setAdapter = object : BetterAdapter(R.layout.list_item_product, list, BR.model){}
 ```
