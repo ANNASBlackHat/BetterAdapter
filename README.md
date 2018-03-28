@@ -50,7 +50,7 @@ apply plugin: 'kotlin-kapt'
 
 Kotlin
 ```kotlin
-recview.setAdapter = object : BetterAdapter(R.layout.list_item_product, your_arraylist_data, BR.model){}
+recview.adapter = object : BetterAdapter(R.layout.list_item_product, your_arraylist_data, BR.model){}
 ```
 
 Java
