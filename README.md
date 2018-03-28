@@ -4,14 +4,13 @@ Easy way to dealing with Recyclerview adapter
 ### Download
 Use Gradle :
 ```sh
-	repositories {
-			maven { url 'https://jitpack.io' }
-		}
-	}
-	
-	dependencies {
-	        implementation 'com.github.ANNASBlackHat:BetterAdapter:1.0.4'
-	}
+repositories {
+	maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+	implementation 'com.github.ANNASBlackHat:BetterAdapter:1.0.4'
+}
 ```
 
 ### Enable Databinding
@@ -23,7 +22,7 @@ dataBinding {
     }
 }
 
-```sh
+```
 
 **if you're using kotlin, add kapt plugin**
 ```sh
