@@ -10,12 +10,16 @@ import android.view.View
  */
 class BetterViewHolder (itemView: View?) : RecyclerView.ViewHolder(itemView) {
 
-    private val binding: ViewDataBinding = DataBindingUtil.bind(itemView)
+    private var  binding: ViewDataBinding? = null
+
+    init {
+        itemView?.let { binding = DataBindingUtil.bind(it) }
+    }
 
     fun onBind(variable: Int, value: Any?){
         value?.let {
-            binding.setVariable(variable, value)
-            binding.executePendingBindings()
+            binding?.setVariable(variable, value)
+            binding?.executePendingBindings()
         }
     }
 }
